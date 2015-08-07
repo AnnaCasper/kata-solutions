@@ -17,3 +17,14 @@ function add(n) {
     return x + n
   }
 }
+
+// Your objective is to complete a recursive function reverse() that receives
+// str as String and returns the same string in reverse order
+function reverse(str) {
+  if (str.length == 0) {
+    return ''
+  } else {
+    var newString = str.substring(1, str.length -1)
+    return str.substring(str.length, str.length -1) + reverse(newString)
+  }
+ }
