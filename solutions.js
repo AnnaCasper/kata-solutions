@@ -20,11 +20,16 @@ function add(n) {
 
 // Your objective is to complete a recursive function reverse() that receives
 // str as String and returns the same string in reverse order
+var result = '';
 function reverse(str) {
-  if (str.length == 0) {
+  if (str.length === 0) {
     return ''
   } else {
-    var newString = str.substring(1, str.length -1)
-    return str.substring(str.length, str.length -1) + reverse(newString)
+    var newString = str.substring(0, str.length -1)
+    // console.log(str.substring(str.length, str.length -1));
+    console.log(result += str.substring(str.length, str.length -1))
+    reverse(newString)
   }
  }
+
+reverse('string')
